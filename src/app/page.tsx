@@ -192,7 +192,7 @@ export default function Home() {
       </div>
 
       {/* LAYER 2: Frosted glass panel (like Gmail) */}
-      <div className="fixed inset-4 md:inset-6 lg:inset-8 z-10 rounded-3xl overflow-hidden">
+      <div className="fixed inset-2 sm:inset-4 md:inset-6 lg:inset-8 z-10 rounded-2xl sm:rounded-3xl overflow-hidden">
         {/* Glass background */}
         <div className="absolute inset-0 bg-white/[0.03] backdrop-blur-2xl" />
 
@@ -206,31 +206,31 @@ export default function Home() {
         <div className="relative h-full overflow-y-auto flex flex-col scrollbar-hide">
 
           {/* Navigation */}
-          <nav className="sticky top-0 z-50 px-6 md:px-10 py-5 bg-white/[0.02] backdrop-blur-sm border-b border-white/5">
+          <nav className="sticky top-0 z-50 px-4 sm:px-6 md:px-10 py-4 sm:py-5 bg-white/[0.02] backdrop-blur-sm border-b border-white/5">
             <div className="max-w-7xl mx-auto flex justify-between items-center">
               <div className="flex items-center gap-3">
-                <div className="text-lg font-medium tracking-tight">
+                <div className="text-base sm:text-lg font-medium tracking-tight">
                   The Product First
                 </div>
               </div>
-              <div className="flex items-center gap-6">
+              <div className="flex items-center gap-2 sm:gap-6">
                 <a
                   href="#about"
                   onClick={(e) => handleNavClick(e, 'about')}
-                  className="text-sm text-white/50 hover:text-white transition-colors"
+                  className="hidden sm:block text-sm text-white/50 hover:text-white transition-colors"
                 >
                   About
                 </a>
                 <a
                   href="#thoughts"
                   onClick={(e) => handleNavClick(e, 'thoughts')}
-                  className="text-sm text-white/50 hover:text-white transition-colors"
+                  className="hidden sm:block text-sm text-white/50 hover:text-white transition-colors"
                 >
                   Thoughts
                 </a>
                 <button
                   onClick={() => setShowWaitlist(true)}
-                  className="text-sm px-4 py-2 rounded-full bg-white text-black font-medium hover:bg-white/90 transition-all"
+                  className="text-xs sm:text-sm px-3 sm:px-4 py-2 rounded-full bg-white text-black font-medium hover:bg-white/90 transition-all"
                 >
                   Join waitlist
                 </button>
@@ -239,23 +239,23 @@ export default function Home() {
           </nav>
 
           {/* Hero Section */}
-          <section className="min-h-[calc(100vh-12rem)] flex items-center px-6 md:px-10 py-12">
+          <section className="min-h-[calc(100vh-10rem)] sm:min-h-[calc(100vh-12rem)] flex items-center px-4 sm:px-6 md:px-10 py-8 sm:py-12">
             <div className="max-w-7xl mx-auto w-full">
 
               {/* Two column layout */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
 
                 {/* Left side - Hero content */}
                 <div className={`transition-all duration-1000 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
 
                   {/* Small tag */}
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 mb-6">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 mb-4 sm:mb-6">
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
                     <span className="text-xs text-white/60">a quiet corner of the internet</span>
                   </div>
 
                   {/* Main headline */}
-                  <h1 className="text-4xl md:text-5xl font-medium tracking-tight leading-[1.1] mb-6">
+                  <h1 className="text-2xl sm:text-4xl md:text-5xl font-medium tracking-tight leading-[1.15] sm:leading-[1.1] mb-4 sm:mb-6">
                     <span className="block text-white">Rethinking what it means</span>
                     <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
                       to build products
@@ -263,25 +263,25 @@ export default function Home() {
                   </h1>
 
                   {/* Subtitle */}
-                  <p className="text-base md:text-lg text-white/50 mb-4 font-light leading-relaxed">
+                  <p className="text-sm sm:text-base md:text-lg text-white/50 mb-3 sm:mb-4 font-light leading-relaxed">
                     Tired of recycled PM advice that sounds smart but doesn&apos;t help? Same. This is where we dig deeper.
                   </p>
-                  <p className="text-base md:text-lg text-white/40 mb-8 font-light">
+                  <p className="text-sm sm:text-base md:text-lg text-white/40 mb-6 sm:mb-8 font-light">
                     That gut feeling that there&apos;s a better way to build? Trust it. The best PMs aren&apos;t following frameworks. They&apos;re building their own.
                   </p>
 
                   {/* CTA */}
-                  <div className="flex items-center gap-4">
+                  <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
                     <button
                       onClick={() => setShowWaitlist(true)}
-                      className="px-8 py-3 rounded-full bg-white text-black text-sm font-medium hover:bg-white/90 transition-all hover:scale-105"
+                      className="px-6 sm:px-8 py-3 rounded-full bg-white text-black text-sm font-medium hover:bg-white/90 transition-all hover:scale-105 text-center"
                     >
                       Join waitlist
                     </button>
                     <a
                       href="#about"
                       onClick={(e) => handleNavClick(e, 'about')}
-                      className="px-8 py-3 rounded-full border border-white/20 text-sm text-white/70 hover:text-white hover:border-white/40 transition-all"
+                      className="px-6 sm:px-8 py-3 rounded-full border border-white/20 text-sm text-white/70 hover:text-white hover:border-white/40 transition-all text-center"
                     >
                       Learn more
                     </a>
@@ -292,10 +292,10 @@ export default function Home() {
                 <div className={`transition-all duration-1000 delay-300 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"}`}>
 
                   {/* Inner glass card */}
-                  <div className="relative bg-white/[0.04] backdrop-blur-sm border border-white/10 rounded-2xl p-8">
+                  <div className="relative bg-white/[0.04] backdrop-blur-sm border border-white/10 rounded-2xl p-5 sm:p-8">
 
                     {/* Card header */}
-                    <div className="flex items-center justify-between mb-6">
+                    <div className="flex items-center justify-between mb-4 sm:mb-6">
                       <span className="text-xs uppercase tracking-[0.15em] text-white/40">
                         Latest thought
                       </span>
@@ -305,14 +305,14 @@ export default function Home() {
                     </div>
 
                     {/* Quote */}
-                    <div className="min-h-[140px] flex items-center">
-                      <p className={`text-xl md:text-2xl text-white/80 font-light leading-relaxed transition-all duration-500 ${isTransitioning ? "opacity-0 translate-y-4" : "opacity-100 translate-y-0"}`}>
+                    <div className="min-h-[100px] sm:min-h-[140px] flex items-center">
+                      <p className={`text-base sm:text-xl md:text-2xl text-white/80 font-light leading-relaxed transition-all duration-500 ${isTransitioning ? "opacity-0 translate-y-4" : "opacity-100 translate-y-0"}`}>
                         &ldquo;{insights[currentInsight].text}&rdquo;
                       </p>
                     </div>
 
                     {/* Progress indicators */}
-                    <div className="flex items-center gap-2 mt-6">
+                    <div className="flex items-center gap-2 mt-4 sm:mt-6">
                       {insights.map((_, i) => (
                         <button
                           key={i}
@@ -325,7 +325,7 @@ export default function Home() {
                           }}
                           className={`h-1 rounded-full transition-all duration-500 ${
                             i === currentInsight
-                              ? "w-8 bg-white/60"
+                              ? "w-6 sm:w-8 bg-white/60"
                               : "w-2 bg-white/20 hover:bg-white/30"
                           }`}
                         />
@@ -338,40 +338,40 @@ export default function Home() {
           </section>
 
           {/* About Section */}
-          <section id="about" className="min-h-[calc(100vh-12rem)] flex items-center px-6 md:px-10 py-16 border-t border-white/5">
+          <section id="about" className="min-h-[auto] sm:min-h-[calc(100vh-12rem)] flex items-center px-4 sm:px-6 md:px-10 py-12 sm:py-16 border-t border-white/5">
             <div className="max-w-7xl mx-auto w-full">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-20">
 
                 {/* Left - Section header */}
                 <div>
-                  <span className="text-xs uppercase tracking-[0.2em] text-white/40 mb-4 block">About</span>
-                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight leading-[1.1] mb-6">
+                  <span className="text-xs uppercase tracking-[0.2em] text-white/40 mb-3 sm:mb-4 block">About</span>
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight leading-[1.15] sm:leading-[1.1] mb-4 sm:mb-6">
                     <span className="text-white">What we&apos;re really doing here</span>
                   </h2>
-                  <p className="text-lg text-white/50 leading-relaxed mb-6">
+                  <p className="text-sm sm:text-lg text-white/50 leading-relaxed mb-4 sm:mb-6">
                     You&apos;ve read the books. Done the courses. Tried the frameworks. And still, something doesn&apos;t click. That&apos;s not a you problem.
                   </p>
-                  <p className="text-lg text-white/40 leading-relaxed">
+                  <p className="text-sm sm:text-lg text-white/40 leading-relaxed">
                     The best product thinking doesn&apos;t come from following rules. It comes from asking better questions. That&apos;s what this space is for.
                   </p>
                 </div>
 
                 {/* Right - Uncomfortable truths */}
-                <div className="space-y-4">
-                  <div className="bg-white/[0.03] border border-white/10 rounded-2xl p-6">
-                    <p className="text-lg text-white/80 leading-relaxed">
+                <div className="space-y-3 sm:space-y-4">
+                  <div className="bg-white/[0.03] border border-white/10 rounded-xl sm:rounded-2xl p-4 sm:p-6">
+                    <p className="text-sm sm:text-lg text-white/80 leading-relaxed">
                       &ldquo;Most product advice is written for someone else&apos;s company.&rdquo;
                     </p>
                   </div>
 
-                  <div className="bg-white/[0.03] border border-white/10 rounded-2xl p-6">
-                    <p className="text-lg text-white/80 leading-relaxed">
+                  <div className="bg-white/[0.03] border border-white/10 rounded-xl sm:rounded-2xl p-4 sm:p-6">
+                    <p className="text-sm sm:text-lg text-white/80 leading-relaxed">
                       &ldquo;The roadmap is a lie. And that&apos;s okay.&rdquo;
                     </p>
                   </div>
 
-                  <div className="bg-white/[0.03] border border-white/10 rounded-2xl p-6">
-                    <p className="text-lg text-white/80 leading-relaxed">
+                  <div className="bg-white/[0.03] border border-white/10 rounded-xl sm:rounded-2xl p-4 sm:p-6">
+                    <p className="text-sm sm:text-lg text-white/80 leading-relaxed">
                       &ldquo;What if the framework is the problem?&rdquo;
                     </p>
                   </div>
@@ -381,29 +381,29 @@ export default function Home() {
           </section>
 
           {/* Thoughts Section */}
-          <section id="thoughts" className="min-h-[calc(100vh-12rem)] px-6 md:px-10 py-16 border-t border-white/5">
+          <section id="thoughts" className="min-h-[auto] sm:min-h-[calc(100vh-12rem)] px-4 sm:px-6 md:px-10 py-12 sm:py-16 border-t border-white/5">
             <div className="max-w-7xl mx-auto w-full">
-              <div className="mb-12">
-                <span className="text-xs uppercase tracking-[0.2em] text-white/40 mb-4 block">Thoughts</span>
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight leading-[1.1] mb-4">
+              <div className="mb-8 sm:mb-12">
+                <span className="text-xs uppercase tracking-[0.2em] text-white/40 mb-3 sm:mb-4 block">Thoughts</span>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight leading-[1.15] sm:leading-[1.1] mb-3 sm:mb-4">
                   <span className="text-white">Recent writings</span>
                 </h2>
-                <p className="text-lg text-white/40 max-w-2xl">
+                <p className="text-sm sm:text-lg text-white/40 max-w-2xl">
                   Short-form ideas, observations, and questions about building products.
                 </p>
               </div>
 
               {/* Thoughts grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                 {insights.map((insight, i) => (
                   <div
                     key={i}
-                    className="bg-white/[0.03] border border-white/10 rounded-2xl p-6 hover:bg-white/[0.05] hover:border-white/20 transition-all cursor-pointer group"
+                    className="bg-white/[0.03] border border-white/10 rounded-xl sm:rounded-2xl p-4 sm:p-6 hover:bg-white/[0.05] hover:border-white/20 transition-all cursor-pointer group"
                   >
-                    <span className="text-xs uppercase tracking-[0.15em] text-white/30 mb-4 block">
+                    <span className="text-xs uppercase tracking-[0.15em] text-white/30 mb-3 sm:mb-4 block">
                       {insight.tag}
                     </span>
-                    <p className="text-white/70 leading-relaxed group-hover:text-white/90 transition-colors">
+                    <p className="text-sm sm:text-base text-white/70 leading-relaxed group-hover:text-white/90 transition-colors">
                       &ldquo;{insight.text}&rdquo;
                     </p>
                   </div>
@@ -413,45 +413,45 @@ export default function Home() {
           </section>
 
           {/* About Me Section */}
-          <section className="px-6 md:px-10 py-20 border-t border-white/5">
+          <section className="px-4 sm:px-6 md:px-10 py-12 sm:py-20 border-t border-white/5">
             <div className="max-w-7xl mx-auto">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-20 items-center">
 
                 {/* Left side - Label and intro */}
                 <div>
-                  <span className="text-xs uppercase tracking-[0.2em] text-white/40 mb-4 block">Behind this</span>
-                  <h2 className="text-3xl md:text-4xl font-medium tracking-tight leading-[1.1] mb-6">
+                  <span className="text-xs uppercase tracking-[0.2em] text-white/40 mb-3 sm:mb-4 block">Behind this</span>
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-medium tracking-tight leading-[1.15] sm:leading-[1.1] mb-4 sm:mb-6">
                     <span className="text-white">Hey, I&apos;m Aditya</span>
                   </h2>
-                  <p className="text-lg text-white/50 leading-relaxed mb-4">
+                  <p className="text-sm sm:text-lg text-white/50 leading-relaxed mb-3 sm:mb-4">
                     I build products and think a lot about why some things work and others don&apos;t.
                   </p>
-                  <p className="text-lg text-white/40 leading-relaxed">
+                  <p className="text-sm sm:text-lg text-white/40 leading-relaxed">
                     This space is my attempt to make sense of it all, out loud.
                   </p>
                 </div>
 
                 {/* Right side - Card with connect */}
-                <div className="bg-white/[0.03] border border-white/10 rounded-2xl p-8">
-                  <div className="flex items-center gap-5 mb-6">
-                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-purple-500/30 to-blue-500/30 border border-white/10 flex items-center justify-center flex-shrink-0">
-                      <span className="text-xl font-medium text-white/80">AC</span>
+                <div className="bg-white/[0.03] border border-white/10 rounded-xl sm:rounded-2xl p-5 sm:p-8">
+                  <div className="flex items-center gap-4 sm:gap-5 mb-4 sm:mb-6">
+                    <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-purple-500/30 to-blue-500/30 border border-white/10 flex items-center justify-center flex-shrink-0">
+                      <span className="text-base sm:text-xl font-medium text-white/80">AC</span>
                     </div>
                     <div>
-                      <div className="text-white font-medium">Aditya Channe</div>
-                      <div className="text-white/40 text-sm">Product Builder</div>
+                      <div className="text-white font-medium text-sm sm:text-base">Aditya Channe</div>
+                      <div className="text-white/40 text-xs sm:text-sm">Product Builder</div>
                     </div>
                   </div>
-                  <p className="text-white/40 text-sm leading-relaxed mb-6">
+                  <p className="text-white/40 text-xs sm:text-sm leading-relaxed mb-4 sm:mb-6">
                     If any of this resonates, I&apos;d love to connect.
                   </p>
                   <a
                     href="https://www.linkedin.com/in/adi-channe/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/[0.05] border border-white/10 text-sm text-white/70 hover:text-white hover:bg-white/[0.08] transition-all"
+                    className="inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-white/[0.05] border border-white/10 text-xs sm:text-sm text-white/70 hover:text-white hover:bg-white/[0.08] transition-all"
                   >
-                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                     </svg>
                     Connect on LinkedIn
@@ -462,36 +462,36 @@ export default function Home() {
           </section>
 
           {/* Join Section */}
-          <section id="join" className="min-h-[60vh] flex items-center px-6 md:px-10 py-16 border-t border-white/5">
+          <section id="join" className="min-h-[auto] sm:min-h-[60vh] flex items-center px-4 sm:px-6 md:px-10 py-12 sm:py-16 border-t border-white/5">
             <div className="max-w-3xl mx-auto w-full text-center">
-              <span className="text-xs uppercase tracking-[0.2em] text-white/40 mb-4 block">Join</span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight leading-[1.1] mb-6">
+              <span className="text-xs uppercase tracking-[0.2em] text-white/40 mb-3 sm:mb-4 block">Join</span>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight leading-[1.15] sm:leading-[1.1] mb-4 sm:mb-6">
                 <span className="text-white">Want to think along?</span>
               </h2>
-              <p className="text-lg text-white/40 mb-10 max-w-xl mx-auto">
+              <p className="text-sm sm:text-lg text-white/40 mb-6 sm:mb-10 max-w-xl mx-auto">
                 I&apos;m building this in public. Join the waitlist to get early access when new content drops.
               </p>
 
               {/* Email signup */}
               {footerSubmitted ? (
-                <div className="text-center py-8">
-                  <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-emerald-500/20 flex items-center justify-center">
-                    <svg className="w-8 h-8 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="text-center py-6 sm:py-8">
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-4 sm:mb-6 rounded-full bg-emerald-500/20 flex items-center justify-center">
+                    <svg className="w-6 h-6 sm:w-8 sm:h-8 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <h3 className="text-2xl font-medium text-white mb-2">You&apos;re in</h3>
-                  <p className="text-white/40">We&apos;ll be in touch soon.</p>
+                  <h3 className="text-xl sm:text-2xl font-medium text-white mb-2">You&apos;re in</h3>
+                  <p className="text-sm sm:text-base text-white/40">We&apos;ll be in touch soon.</p>
                 </div>
               ) : (
-                <form onSubmit={handleFooterSubmit} className="flex flex-col items-center justify-center gap-4 max-w-md mx-auto">
+                <form onSubmit={handleFooterSubmit} className="flex flex-col items-center justify-center gap-3 sm:gap-4 max-w-md mx-auto">
                   <input
                     type="text"
                     placeholder="Your name"
                     value={footerFormData.name}
                     onChange={(e) => setFooterFormData({ ...footerFormData, name: e.target.value })}
                     required
-                    className="w-full px-6 py-3 rounded-full bg-white/[0.05] border border-white/10 text-white placeholder:text-white/30 focus:outline-none focus:border-white/30 transition-colors"
+                    className="w-full px-5 sm:px-6 py-2.5 sm:py-3 rounded-full bg-white/[0.05] border border-white/10 text-sm sm:text-base text-white placeholder:text-white/30 focus:outline-none focus:border-white/30 transition-colors"
                   />
                   <input
                     type="email"
@@ -499,26 +499,26 @@ export default function Home() {
                     value={footerFormData.email}
                     onChange={(e) => setFooterFormData({ ...footerFormData, email: e.target.value })}
                     required
-                    className="w-full px-6 py-3 rounded-full bg-white/[0.05] border border-white/10 text-white placeholder:text-white/30 focus:outline-none focus:border-white/30 transition-colors"
+                    className="w-full px-5 sm:px-6 py-2.5 sm:py-3 rounded-full bg-white/[0.05] border border-white/10 text-sm sm:text-base text-white placeholder:text-white/30 focus:outline-none focus:border-white/30 transition-colors"
                   />
                   <button
                     type="submit"
                     disabled={isFooterSubmitting}
-                    className="w-full px-8 py-3 rounded-full bg-white text-black text-sm font-medium hover:bg-white/90 transition-all hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full px-6 sm:px-8 py-2.5 sm:py-3 rounded-full bg-white text-black text-sm font-medium hover:bg-white/90 transition-all hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isFooterSubmitting ? "Joining..." : "Join waitlist"}
                   </button>
                 </form>
               )}
-              <p className="text-xs text-white/30 mt-4">No spam. Just thoughts worth thinking about.</p>
+              <p className="text-xs text-white/30 mt-3 sm:mt-4">No spam. Just thoughts worth thinking about.</p>
             </div>
           </section>
 
           {/* Footer inside glass */}
-          <footer className="px-6 md:px-10 py-4 border-t border-white/5">
-            <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-white/30">
+          <footer className="px-4 sm:px-6 md:px-10 py-4 border-t border-white/5">
+            <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4 text-xs text-white/30">
               <span>© 2024 The Product First</span>
-              <div className="flex items-center gap-6">
+              <div className="flex items-center gap-4 sm:gap-6">
                 <a href="#" className="hover:text-white/60 transition-colors">Twitter</a>
                 <a href="#" className="hover:text-white/60 transition-colors">LinkedIn</a>
                 <a href="#" className="hover:text-white/60 transition-colors">Newsletter</a>
@@ -530,14 +530,14 @@ export default function Home() {
 
       {/* Waitlist Modal */}
       {showWaitlist && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center">
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
           {/* Backdrop */}
           <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
 
           {/* Modal */}
           <div
             ref={modalRef}
-            className="relative w-full max-w-md mx-4 bg-[#0a0a0f]/95 backdrop-blur-xl border border-white/10 rounded-3xl p-8 shadow-2xl"
+            className="relative w-full max-w-md bg-[#0a0a0f]/95 backdrop-blur-xl border border-white/10 rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-2xl"
           >
             {/* Close button */}
             <button
@@ -550,23 +550,23 @@ export default function Home() {
             </button>
 
             {submitted ? (
-              <div className="text-center py-8">
-                <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-emerald-500/20 flex items-center justify-center">
-                  <svg className="w-8 h-8 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div className="text-center py-6 sm:py-8">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-4 sm:mb-6 rounded-full bg-emerald-500/20 flex items-center justify-center">
+                  <svg className="w-6 h-6 sm:w-8 sm:h-8 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-medium text-white mb-2">You&apos;re in</h3>
-                <p className="text-white/40">We&apos;ll be in touch soon.</p>
+                <h3 className="text-xl sm:text-2xl font-medium text-white mb-2">You&apos;re in</h3>
+                <p className="text-sm sm:text-base text-white/40">We&apos;ll be in touch soon.</p>
               </div>
             ) : (
               <>
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-medium text-white mb-2">Join the waitlist</h3>
-                  <p className="text-white/40 text-sm">Be the first to know when we launch.</p>
+                <div className="text-center mb-6 sm:mb-8">
+                  <h3 className="text-xl sm:text-2xl font-medium text-white mb-2">Join the waitlist</h3>
+                  <p className="text-white/40 text-xs sm:text-sm">Be the first to know when we launch.</p>
                 </div>
 
-                <form onSubmit={handleSubmit} className="space-y-4">
+                <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
                   <div>
                     <input
                       type="text"
@@ -574,7 +574,7 @@ export default function Home() {
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       required
-                      className="w-full px-5 py-3 rounded-xl bg-white/[0.05] border border-white/10 text-white placeholder:text-white/30 focus:outline-none focus:border-white/30 transition-colors"
+                      className="w-full px-4 sm:px-5 py-2.5 sm:py-3 rounded-xl bg-white/[0.05] border border-white/10 text-sm sm:text-base text-white placeholder:text-white/30 focus:outline-none focus:border-white/30 transition-colors"
                     />
                   </div>
                   <div>
@@ -584,13 +584,13 @@ export default function Home() {
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       required
-                      className="w-full px-5 py-3 rounded-xl bg-white/[0.05] border border-white/10 text-white placeholder:text-white/30 focus:outline-none focus:border-white/30 transition-colors"
+                      className="w-full px-4 sm:px-5 py-2.5 sm:py-3 rounded-xl bg-white/[0.05] border border-white/10 text-sm sm:text-base text-white placeholder:text-white/30 focus:outline-none focus:border-white/30 transition-colors"
                     />
                   </div>
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full py-3 rounded-xl bg-white text-black font-medium hover:bg-white/90 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full py-2.5 sm:py-3 rounded-xl bg-white text-black text-sm sm:text-base font-medium hover:bg-white/90 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? (
                       <span className="flex items-center justify-center gap-2">
@@ -606,7 +606,7 @@ export default function Home() {
                   </button>
                 </form>
 
-                <p className="text-xs text-white/30 text-center mt-6">No spam. Just thoughts worth thinking about.</p>
+                <p className="text-xs text-white/30 text-center mt-4 sm:mt-6">No spam. Just thoughts worth thinking about.</p>
               </>
             )}
           </div>
