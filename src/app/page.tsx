@@ -239,7 +239,7 @@ export default function Home() {
           </nav>
 
           {/* Hero Section - fills viewport minus glass panel insets and nav */}
-          <section className="min-h-[90vh] flex items-center px-4 sm:px-6 md:px-10 py-8 sm:py-12">
+          <section className="min-h-[90vh] flex items-start px-4 sm:px-6 md:px-10 pt-12 sm:pt-16 md:pt-20 pb-8 sm:pb-12">
             <div className="max-w-7xl mx-auto w-full">
 
               {/* Two column layout */}
